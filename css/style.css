@@ -118,13 +118,13 @@ nav {
     text-align: center;
 }
 .fotoPerfil {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 5px solid var(--cor-destaque);
-    object-fit: cover;
-    margin-bottom: 20px;
+    width: 320px;
+    height: 320px;
+    border-radius: 10px 30%;
+    border: 5px solid var(--roxo8);
+    margin: 30px;
 }
+
 #sobre h1 { font-size: 2.5rem; }
 #sobre .subtitulo { margin-bottom: 20px; }
 #sobre h2 {
