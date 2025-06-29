@@ -1,0 +1,402 @@
+/* --- CONFIGURAÇÕES GERAIS E VARIÁVEIS --- */
+:root {
+    --roxo1: #FCF2FF;
+    --roxo2: #DBC1F6;
+    --roxo3: #C8A4F4;
+    --roxo4: #CEB4E8;
+    --roxo5: #A88DC3;
+    --roxo6: #827AB5;
+    --roxo7: #250E2B;
+    --roxo8: #100014;
+
+    --h1: 'Pacifico', sans-serif;
+    --h2: roboto, sans-serif;
+    --corpo: 'Roboto mono', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--corpo);
+    background-color: var(--roxo8);
+    background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+    color: var(--roxo8);
+}
+
+main {
+    background-color: var(--roxo2);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: var(--h1);
+    color: var(--roxo8);
+}
+
+h2, h3, h4 {
+    font-family: var(--h2);
+    color: var(--roxo8);
+}
+
+section {
+    padding: 60px 30px;
+}
+
+/* --- CABEÇALHO E NAVEGAÇÃO --- */
+header {
+    background: url('../media/backgroundBody.jpg') fill;
+    padding: 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#menuHamburguer {
+    background: none;
+    border: none;
+    color: var(--cor-destaque);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+#linksNavegacao {
+    display: none; /* Escondido no mobile */
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--roxo8);
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#linksNavegacao.ativo {
+    display: flex; /* Mostra quando ativo */
+}
+
+#linksNavegacao li {
+    list-style: none;
+}
+
+#linksNavegacao a {
+    color: var(--cor-destaque);
+    text-decoration: none;
+    font-family: var(--h1);
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#linksNavegacao a.ativo,
+#linksNavegacao a:hover {
+    background-color: var(--cor-principal);
+    color: var(--roxo8);
+}
+
+/* --- SEÇÃO SOBRE MIM --- */
+#sobre {
+    text-align: center;
+}
+.fotoPerfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--cor-destaque);
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+#sobre h1 { font-size: 2.5rem; }
+#sobre .subtitulo { margin-bottom: 20px; }
+#sobre h2 {
+    font-size: 1.8rem;
+    margin: 30px 0 15px 0;
+    display: inline-block;
+    position: relative;
+}
+#sobre h2 i { margin-right: 10px; }
+#sobre .textoSobre {
+    text-align: left;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* --- SEÇÃO EDUCAÇÃO --- */
+#educacao {
+    background-color: var(--cor-secundaria);
+}
+#educacao h2 { text-align: center; margin-bottom: 30px; }
+.containerEducacao {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.itemCurso h4 { font-size: 1.2rem; }
+.itemCurso p { margin-top: 5px; }
+
+/* --- SEÇÃO PORTFÓLIO (CARROSSEL) --- */
+#portfolio {
+    overflow: hidden;
+    padding-bottom: 60px;
+}
+#portfolio h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.wrapperCarrossel {
+    position: relative;
+    max-width: 90%;
+    margin: 0 auto;
+}
+.carrosselPortfolio {
+    display: flex;
+    align-items: center; /* Alinha verticalmente os cards */
+    padding: 20px 0;
+    /* Comportamento de rolagem */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* Melhora a experiência no iOS */
+    scrollbar-width: none; /* Esconde a barra de rolagem no Firefox */
+}
+.carrosselPortfolio::-webkit-scrollbar {
+    display: none; /* Esconde a barra de rolagem no Chrome/Safari */
+}
+.cartaoProjeto {
+    flex: 0 0 80%; /* Não cresce, não encolhe, base de 80% */
+    max-width: 280px;
+    margin: 0 15px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    border: 3px solid var(--roxo8);
+    box-shadow: 5px 5px 0px var(--roxo8);
+    text-align: center;
+    scroll-snap-align: center;
+    transform: scale(0.9);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.cartaoProjeto.destaque {
+    transform: scale(1);
+    border-color: var(--cor-destaque);
+    box-shadow: 8px 8px 0px var(--cor-secundaria);
+}
+.cartaoProjeto img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.cartaoProjeto h3 {
+    color: var(--roxo8);
+    margin-bottom: 10px;
+}
+.controleCarrossel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--roxo8);
+    cursor: pointer;
+    z-index: 10;
+    padding: 10px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+.controleCarrossel:hover {
+    opacity: 1;
+}
+.controleCarrossel.anterior { left: -20px; }
+.controleCarrossel.proximo { right: -20px; }
+
+
+/* --- SEÇÃO CONTATO --- */
+#contato h2, #contato > p { text-align: center; }
+#contato > p { margin-bottom: 30px; max-width: 500px; margin-left: auto; margin-right: auto;}
+.formularioContato {
+    background-color: var(--cor-fundo-form);
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+.formularioContato h3 { color: var(--roxo8); text-align: center; margin-bottom: 20px;}
+.grupoFormulario { margin-bottom: 15px; }
+.grupoFormulario label { display: block; margin-bottom: 5px; font-weight: 500;}
+.grupoFormulario input, .grupoFormulario textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--cor-secundaria);
+    border-radius: 8px;
+    font-family: var(--corpo);
+}
+.botao {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--roxo8);
+    color: var(--cor-destaque);
+    border: none;
+    border-radius: 8px;
+    font-family: var(--h1);
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.redesSociais { text-align: center; }
+.redesSociais a {
+    color: var(--roxo8);
+    font-size: 2rem;
+    margin: 0 10px;
+}
+
+/* --- RODAPÉ --- */
+.rodapeSite {
+    background-color: var(--cor-secundaria);
+    text-align: center;
+    padding: 30px 20px;
+}
+.rodapeSite h3 { margin-bottom: 20px; }
+.rodapeSite ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.rodapeSite a {
+    color: var(--cor-destaque);
+    text-decoration: none;
+}
+.textoCopyright {
+    font-size: 0.9em;
+}
+
+/* --- BOTÃO VOLTAR AO TOPO --- */
+#botaoVoltarAoTopo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--roxo8);
+    color: var(--cor-destaque);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+#botaoVoltarAoTopo.mostrar {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* --- ANIMAÇÃO DE APARECIMENTO --- */
+.fadeInElemento {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fadeInElemento.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ############################################# */
+/* ### MEDIA QUERY PARA TELAS MAIORES (DESKTOP) ### */
+/* ############################################# */
+@media (min-width: 992px) {
+    section {
+        padding: 60px 40px;
+    }
+
+    /* --- NAVEGAÇÃO DESKTOP --- */
+    #menuHamburguer { display: none; }
+    nav { justify-content: center; }
+    #linksNavegacao {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        height: auto;
+        width: auto;
+        background: none;
+    }
+    #linksNavegacao a { font-size: 1.1rem; }
+
+    /* --- LAYOUTS DE SEÇÃO DESKTOP --- */
+    .containerEducacao {
+        flex-direction: row;
+        justify-content: center;
+        gap: 100px;
+        align-items: flex-start;
+    }
+
+    #portfolio { padding-bottom: 60px; }
+    .wrapperCarrossel { overflow: visible; }
+    .carrosselPortfolio {
+        overflow: hidden;
+        scroll-snap-type: none;
+        justify-content: center;
+        padding-bottom: 0;
+    }
+    .cartaoProjeto {
+        width: auto;
+        max-width: 260px; /* Largura dos não destacados */
+        transform: scale(0.85); /* Ficam menores */
+        margin: 0 -20px; /* Sobrepõe um pouco */
+    }
+    .cartaoProjeto.destaque {
+        max-width: 340px; /* Largura do destaque */
+        transform: scale(1); /* Tamanho normal */
+        z-index: 5;
+    }
+    .controleCarrossel {
+        font-size: 2rem;
+        top: 50%;
+    }
+    .controleCarrossel.anterior { left: 20%; }
+    .controleCarrossel.proximo { right: 20%; }
+
+
+    .containerContato {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+    .formularioContato {
+        flex: 2;
+        margin-bottom: 0;
+    }
+    .redesSociais {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .redesSociais a { font-size: 2.5rem; }
+}
