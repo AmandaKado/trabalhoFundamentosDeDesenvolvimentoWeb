@@ -24,12 +24,22 @@ body {
     background: url('../media/backgroundSite.png'), linear-gradient(to bottom, var(--roxo7), var(--roxo6));
 }
 
+h1 {
+    font-family: var(--tituloPrincipal);
+}
+
 header {
     background: rgba(42, 31, 68, 0.8) url('../media/backgroundBody.jpg') center / cover;
     backdrop-filter: blur(10px); 
-    padding: 10px 20px;
+    padding: 30px;
     position: sticky;
     top: 0;
     z-index: 100;
     width: 100%;
+}
+
+footer {
+    background: rgba(42, 31, 68, 0.8) url('../media/backgroundBody.jpg') center / cover;
+    backdrop-filter: blur(10px); 
+    padding: 30px;
 }
