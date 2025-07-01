@@ -33,11 +33,6 @@ p {
     font-size: 1.2em;
 }
 
-nav {
-    display: flex;
-    flex-direction: row;
-}
-
 #menuHamburguer {
     background: none;
     border: none;
@@ -65,34 +60,102 @@ header {
     text-align: center;
 }
 
-i {
+ul li a {
+    display: block;
+    font-family: var(--textoComum);
+    font-size: 16px;
+    font-weight: bold;
     color: var(--roxo1);
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#linksNavegacao li {
+    border-radius: 10px;
+    list-style-type: none;
+    background-color: rgba(93, 64, 160, 0.562);
+    padding: 15px 30px;
+    margin: 15px 30px;  
+    width: 90vw;
+}
+
+#linksNavegacao li:hover {
+    background-color: rgba(191, 180, 218, 0.582); 
+    width: 90vw;
     cursor: pointer;
 }
 
-ul {
+#linksNavegacao,
+#fecharMenu {
+    display: block;
+    cursor: pointer;
+}
+
+#menuHamburguer {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    }
+
+#menuHamburguer img, 
+#fecharMenu img {
+    width: 30px;
+    height: auto;
+}
+
+nav.menu-aberto {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(var(--roxo7-rgb), 0.95);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav.menu-aberto #menuHamburguer {
     display: none;
 }
 
-li {
-    display: none;
-    font-family: var(--textoComum);
+nav.menu-aberto #linksNavegacao {
+    display: block;
+    text-align: center;
+    list-style: none;
+}
+
+nav.menu-aberto #linksNavegacao li {
+    display: block;
     background-color: rgba(219, 193, 246, 0.25);
     padding: 10px;
     margin-bottom: 15px;
     border-radius: 10px;
+    transition: background-color 0.3s;
 }
 
-li:hover {
+nav.menu-aberto #linksNavegacao li:hover {
     background-color: rgba(219, 193, 246, 0.50);
 }
 
-a {
+nav.menu-aberto #linksNavegacao a {
+    display: block; 
+    font-size: 1.5rem;
+}
+
+nav.menu-aberto #fecharMenu {
     display: block;
-    text-decoration: none;
-    color: var(--roxo1);
+    background: none;
+    border: none;
     cursor: pointer;
-    font-size: 1.2em;
+    margin-top: 40px;
 }
 
 footer {
