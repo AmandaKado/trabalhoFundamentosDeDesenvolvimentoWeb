@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+:root {
+    --roxo1: #FCF2FF;
+    --roxo2: #DBC1F6;
+    --roxo3: #C8A4F4;
+    --roxo4: #CEB4E8;
+    --roxo5: #A88DC3;
+    --roxo6: #827AB5;
+    --roxo7: #250E2B;
+    --roxo8: #100014;
+
+    --tituloPrincipal: 'Pacifico' sans serif;
+    --texto: roboto mono sans serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('../media/backgroundSite.png'), linear-gradient(to bottom, var(--roxo7), var(--roxo6));
+}
+
+header {
+    background: rgba(42, 31, 68, 0.8) url('../media/backgroundBody.jpg') center / cover;
+    backdrop-filter: blur(10px); 
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+}
