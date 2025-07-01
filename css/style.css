@@ -33,13 +33,18 @@ p {
     font-size: 1.2em;
 }
 
+nav {
+    display: flex;
+    flex-direction: row;
+}
+
 #menuHamburguer {
-    display: none;
     background: none;
     border: none;
 }
 
-#fecharMenu {
+#fecharMenu {    
+    display: none;
     background: none;
     border: none;
 }
@@ -65,7 +70,12 @@ i {
     cursor: pointer;
 }
 
+ul {
+    display: none;
+}
+
 li {
+    display: none;
     font-family: var(--textoComum);
     background-color: rgba(219, 193, 246, 0.25);
     padding: 10px;
