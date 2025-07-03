@@ -175,8 +175,10 @@ main #sobre {
     z-index: -2;
     background: linear-gradient(
         to bottom, 
-        var(--roxo4), 
-        var(--roxo6)  
+        var(--roxo2),
+        var(--roxo1),
+        var(--roxo1),
+        var(--roxo1)
     );
 }
 
@@ -215,12 +217,6 @@ main #sobre p {
     max-width: 370px;
     height: auto;
     border-radius: 10px 100px;
-    border: solid 5px rgba(15, 3, 44, 0.63);
-    transition: transform 0.3s ease-in-out;
-}
-
-.fotoPerfil:hover {
-    transform: scale(1.02);
 }
 
 .tituloSobreMim {
