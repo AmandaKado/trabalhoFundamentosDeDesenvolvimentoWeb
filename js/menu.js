@@ -1,7 +1,7 @@
 export function iniciarMenu() {
 
     const menuHamburguer = document.getElementById('menuHamburguer');
-    const links = document.querySelectorAll('nav');
+    const links = document.querySelector('nav');
     const fecharMenu = document.getElementById('fecharMenu');
 
     menuHamburguer.addEventListener('click', () => {

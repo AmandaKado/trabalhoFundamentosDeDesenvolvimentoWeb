@@ -47,12 +47,11 @@ header {
     top: 0;
     z-index: 999;
     width: 100vw;
-    height: 60px;
+    height: 90px;
     text-align: center;
 }
 
 ul li a {
-    display: block;
     font-family: var(--textoComum);
     font-size: 16px;
     font-weight: bold;
@@ -67,36 +66,8 @@ nav {
     height: 30px;
 }
 
-nav.menuAberto {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: auto; 
-    background-color: rgba(37, 14, 43, 0.95); 
-    
-    /* AGORA aplicamos a organização em coluna para centralizar */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-nav.menuAberto #menuHamburguer {
-    display: none;
-}
-
-nav.menuAberto #linksNavegacao,
-nav.menuAberto #fecharMenu {
-    display: block;
-}
-
 #menuHamburguer {
     display: block;
-    position: fixed;
-    top: 15px; 
-    right: 15px; 
-    z-index: 999;
     background: none;
     border: none;
     cursor: pointer;
@@ -133,6 +104,29 @@ nav.menuAberto #fecharMenu {
     cursor: pointer;
 }
 
+nav.menuAberto {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: auto; 
+    background-color: rgba(37, 14, 43, 0.95); 
+    
+    /* AGORA aplicamos a organização em coluna para centralizar */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav.menuAberto #menuHamburguer {
+    display: none;
+}
+
+nav.menuAberto #linksNavegacao,
+nav.menuAberto #fecharMenu {
+    display: block;
+}
 
 nav.menuAberto #linksNavegacao li:hover {
     background-color: rgba(219, 193, 246, 0.50);
