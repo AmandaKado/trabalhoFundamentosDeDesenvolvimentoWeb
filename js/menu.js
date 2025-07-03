@@ -1,8 +1,9 @@
 export function iniciarMenu() {
 
     const menuHamburguer = document.getElementById('menuHamburguer');
-    const links = document.querySelector('nav');
     const fecharMenu = document.getElementById('fecharMenu');
+    const links = document.querySelector('nav');
+    const linksDoMenu = document.querySelectorAll('.itemNavegacao');
 
     menuHamburguer.addEventListener('click', () => {
             links.classList.add('menuAberto');
@@ -10,6 +11,12 @@ export function iniciarMenu() {
 
     fecharMenu.addEventListener('click', () => {
         links.classList.remove('menuAberto');
+    });
+
+    linksDoMenu.forEach(link => {
+        link.addEventListener('click', () => {
+            links.classList.remove('menuAberto');
+        });
     });
 
 }

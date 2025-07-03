@@ -112,7 +112,6 @@ nav.menuAberto {
     height: auto; 
     background-color: rgba(37, 14, 43, 0.95); 
     
-    /* AGORA aplicamos a organização em coluna para centralizar */
     display: flex;
     flex-direction: column;
     justify-content: center;
