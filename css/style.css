@@ -37,6 +37,8 @@ p {
     font-size: 1.2em;
 }
 
+/* CABEÇALHO */
+
 header {
     background: rgba(42, 31, 68, 0.8) url('../media/backgroundBody.jpg') center / cover;
     backdrop-filter: blur(10px); 
