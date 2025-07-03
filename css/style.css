@@ -97,11 +97,13 @@ nav {
     padding: 15px 30px;
     margin: 15px 30px;  
     width: 90vw;
+    transition: transform 0.3s ease-in-out;
 }
 
 nav.menuAberto #linksNavegacao li:hover {
     background-color: rgba(191, 180, 218, 0.151);
     width: 90vw;
+    transform: scale(1.02);
     cursor: pointer;
 }
 
@@ -130,5 +132,9 @@ nav.menuAberto #fecharMenu {
 }
 
 nav.menuAberto #linksNavegacao li:hover {
+    background-color: rgba(219, 193, 246, 0.50);
+}
+
+nav.menuAberto #linksNavegacao li.ativo {
     background-color: rgba(219, 193, 246, 0.50);
 }
