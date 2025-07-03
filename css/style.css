@@ -160,13 +160,30 @@ main span {
     font-weight: bold;
 }
 
+main .divisoria{
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(
+        to right, 
+        var(--roxo8),
+        var(--roxo7)
+    );
+}
+
 main #sobre {
     position: relative;
+    z-index: -2;
     background: linear-gradient(
         to bottom, 
         var(--roxo4), 
         var(--roxo6)  
     );
+}
+
+main #sobre .divisoriaSobre {
+    position: absolute;
+    top: 430px;
+    z-index: -1;
 }
 
 main #sobre h1 {
