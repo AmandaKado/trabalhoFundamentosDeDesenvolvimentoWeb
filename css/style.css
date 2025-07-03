@@ -165,8 +165,8 @@ main {
 main #sobre {
     background: linear-gradient(
         to bottom, 
-        var(--roxo4) 30%, 
-        var(--roxo6) 70% 
+        var(--roxo4), 
+        var(--roxo6)  
     );
 }
 
@@ -185,7 +185,6 @@ main #sobre p {
     font-style: italic;
     color: var(--roxo8);
     text-align: center;
-    margin: 0 30px 30px 0px;
 }
 
 main #sobre #dev {
