@@ -99,8 +99,8 @@ nav {
     width: 90vw;
 }
 
-#linksNavegacao li:hover {
-    background-color: rgba(191, 180, 218, 0.582); 
+header.menuAberto #linksNavegacao li:hover {
+    background-color: rgba(191, 180, 218, 0.151);
     width: 90vw;
     cursor: pointer;
 }
@@ -112,7 +112,8 @@ nav.menuAberto {
     width: 100vw;
     height: auto; 
     background: rgba(42, 31, 68, 0.8) url('../media/backgroundBody.jpg') center / cover;
-    backdrop-filter: blur(10px);     padding: 30px;
+    backdrop-filter: blur(10px);     
+    padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -1,6 +1,7 @@
 export function iniciarMenu() {
 
     const nav = document.querySelector('nav');
+    const header = document.querySelector('header');
     const menuHamburguer = document.getElementById('menuHamburguer');
     const fecharMenu = document.getElementById('fecharMenu');
     const linksDoMenu = document.querySelectorAll('.itemNavegacao');
@@ -21,5 +22,11 @@ export function iniciarMenu() {
             link.addEventListener('click', fecharMenuAberto);
         });
     }
+
+    header.addEventListener('click', (event) => {
+        if (nav.classList.contains('menuAberto') && !event.target.closest('nav')) {
+            fecharMenuAberto();
+        }
+    });
     
 };
