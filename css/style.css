@@ -13,7 +13,7 @@
     --roxo8: #100014;
 
     --tituloPrincipal: 'Pacifico';
-    --textoComum: monospace;
+    --textoComum: "Roboto Mono", monospace;
 }
 
 /* CONFIGURAÇÕES GERAIS */
@@ -151,8 +151,11 @@ nav.menuAberto #linksNavegacao li.ativo {
 }
 
 .estrelaEnfeite {
+    display: flex;
+    flex-direction: row;
     width: 30px;
     height: auto;
+    margin: 30px 30px 0 30px;
 }
 
 main {
@@ -160,6 +163,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 90px;
 }
 
 main #sobre {
@@ -175,7 +179,6 @@ main #sobre h1 {
     font-size: 4em;
     color: var(--roxo7);
     text-align: center;
-    margin: 30px 0;
 }
 
 main #sobre p {
@@ -194,17 +197,42 @@ main #sobre p {
     animation: piscar 0.7s infinite;
 }
 
-main .fotoPerfil {
+.fotoPerfil {
     margin: 30px;
     width: 90vw;
+    max-width: 370px;
     height: auto;
     border-radius: 10px 100px;
     border: solid 5px rgba(15, 3, 44, 0.63);
     transition: transform 0.3s ease-in-out;
 }
 
-main .fotoPerfil:hover {
+.fotoPerfil:hover {
     transform: scale(1.02);
+}
+
+.tituloSobreMim {
+    padding: 0px 30px 30px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    color: var(--roxo7);
+}
+
+.containerSobreMim {
+    text-align: left;
+}
+
+.tituloSobreMim img {
+    width: 30px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.containerSobreMim .textoSobre {
+    font-weight: normal;
+    text-align: left;
+    margin: 0 30px 15px 30px;
 }
 
 @keyframes piscar {
