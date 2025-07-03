@@ -1,5 +1,5 @@
 
-import {iniciarMenu} from 'menu.js'; 
+import { iniciarMenu } from '../js/modules/menu.js'; 
 
 iniciarMenu();
 
