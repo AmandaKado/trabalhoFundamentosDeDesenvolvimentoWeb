@@ -192,9 +192,9 @@ main #sobre #dev {
     font-weight: bold;
 }
 
-main #sobre .subtitulo {
+.subtitulo::after {
     content: '|';
-    margin-left: 5px;
+    margin-left: 2px;
     opacity: 1;
     animation: piscar 0.7s infinite;
 }
@@ -206,3 +206,12 @@ main .fotoPerfil {
     border-radius: 10px 100px;
     border: solid 5px rgba(15, 3, 44, 0.63);
 }
+
+@keyframes piscar {
+    0%, 100% {
+        opacity: 1; /* O cursor está totalmente visível */
+    }
+    50% {
+        opacity: 0; /* O cursor fica invisível no meio da animação */
+    }
+};
