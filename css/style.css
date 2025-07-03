@@ -200,6 +200,11 @@ main .fotoPerfil {
     height: auto;
     border-radius: 10px 100px;
     border: solid 5px rgba(15, 3, 44, 0.63);
+    transition: transform 0.3s ease-in-out;
+}
+
+main .fotoPerfil:hover {
+    transform: scale(1.02);
 }
 
 @keyframes piscar {
