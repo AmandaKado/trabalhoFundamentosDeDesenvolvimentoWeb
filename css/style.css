@@ -99,7 +99,7 @@ nav {
     width: 90vw;
 }
 
-header.menuAberto #linksNavegacao li:hover {
+nav.menuAberto #linksNavegacao li:hover {
     background-color: rgba(191, 180, 218, 0.151);
     width: 90vw;
     cursor: pointer;

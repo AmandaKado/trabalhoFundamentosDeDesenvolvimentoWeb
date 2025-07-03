@@ -1,17 +1,25 @@
 export function iniciarMenu() {
 
     const nav = document.querySelector('nav');
-    const header = document.querySelector('header');
     const menuHamburguer = document.getElementById('menuHamburguer');
     const fecharMenu = document.getElementById('fecharMenu');
     const linksDoMenu = document.querySelectorAll('.itemNavegacao');
 
+    const fecharSeClicarFora = (event) => {
+
+        if (!nav.contains(event.target) && event.target !== menuHamburguer) {
+            fecharMenuAberto(); 
+        }
+    };
+
     const abrirMenu = () => {
         nav.classList.add('menuAberto');
+        setTimeout(() => document.addEventListener('click', fecharSeClicarFora));
     };
 
     const fecharMenuAberto = () => {
         nav.classList.remove('menuAberto');
+        document.removeEventListener('click', fecharSeClicarFora);
     };
 
     if (menuHamburguer && fecharMenu && nav) {
@@ -22,11 +30,4 @@ export function iniciarMenu() {
             link.addEventListener('click', fecharMenuAberto);
         });
     }
-
-    header.addEventListener('click', (event) => {
-        if (nav.classList.contains('menuAberto') && !event.target.closest('nav')) {
-            fecharMenuAberto();
-        }
-    });
-    
 };
