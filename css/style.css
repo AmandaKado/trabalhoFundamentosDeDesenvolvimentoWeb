@@ -192,6 +192,13 @@ main #sobre #dev {
     font-weight: bold;
 }
 
+main #sobre .subtitulo {
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: piscar 0.7s infinite;
+}
+
 main .fotoPerfil {
     margin: 30px;
     width: 90vw;
