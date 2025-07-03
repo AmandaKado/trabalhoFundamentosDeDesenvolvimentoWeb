@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+/* DEFINIÇÃO DE VARIÁVEIS */
+
 :root {
     --roxo1: #FCF2FF;
     --roxo2: #DBC1F6;
@@ -13,6 +15,8 @@
     --tituloPrincipal: 'Pacifico';
     --textoComum: monospace;
 }
+
+/* CONFIGURAÇÕES GERAIS */
 
 * {
     margin: 0;
@@ -33,30 +37,14 @@ p {
     font-size: 1.2em;
 }
 
-#menuHamburguer {
-    background: none;
-    border: none;
-}
-
-#fecharMenu {    
-    display: none;
-    background: none;
-    border: none;
-}
-
-#menuHamburguer img, #fecharMenu img {
-    width: 30px;
-    height: auto;
-}
-
 header {
     background: rgba(42, 31, 68, 0.8) url('../media/backgroundBody.jpg') center / cover;
     backdrop-filter: blur(10px); 
     padding: 30px;
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 100;
-    width: 100%;
+    z-index: 999;
+    width: 100vw;
     text-align: center;
 }
 
@@ -76,6 +64,33 @@ nav {
     align-items: center;
 }
 
+#menuHamburguer {
+    display: block;
+    position: fixed;
+    top: 15px; 
+    right: 15px; 
+    z-index: 999;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#linksNavegacao {
+    display: none;
+    cursor: pointer;
+}
+
+#fecharMenu {    
+    display: none;
+    background: none;
+    border: none;
+}
+
+#menuHamburguer img, #fecharMenu img {
+    width: 30px;
+    height: auto;
+}
+
 #linksNavegacao li {
     border-radius: 10px;
     list-style-type: none;
@@ -91,75 +106,18 @@ nav {
     cursor: pointer;
 }
 
-#linksNavegacao,
-#fecharMenu {
-    display: block;
-    cursor: pointer;
-}
-
-#menuHamburguer {
-    display: block;
-    background: none;
-    border: none;
-    cursor: pointer;
-    }
-
-#menuHamburguer img, 
-#fecharMenu img {
-    width: 30px;
-    height: auto;
-}
-
 nav.menu-aberto {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: auto;
     background-color: rgba(var(--roxo7-rgb), 0.95);
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-nav.menu-aberto #menuHamburguer {
-    display: none;
-}
-
-nav.menu-aberto #linksNavegacao {
-    display: block;
-    text-align: center;
-    list-style: none;
-}
-
-nav.menu-aberto #linksNavegacao li {
-    display: block;
-    background-color: rgba(219, 193, 246, 0.25);
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    transition: background-color 0.3s;
-}
-
 nav.menu-aberto #linksNavegacao li:hover {
     background-color: rgba(219, 193, 246, 0.50);
-}
-
-nav.menu-aberto #linksNavegacao a {
-    display: block; 
-    font-size: 1.5rem;
-}
-
-nav.menu-aberto #fecharMenu {
-    display: block;
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin-top: 40px;
-}
-
-footer {
-    background: rgba(42, 31, 68, 0.8) url('../media/backgroundBody.jpg') center / cover;
-    backdrop-filter: blur(10px); 
-    padding: 30px;
 }
