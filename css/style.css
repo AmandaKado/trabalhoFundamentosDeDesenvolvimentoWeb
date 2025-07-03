@@ -37,6 +37,34 @@ p {
     font-size: 1.2em;
 }
 
+a#botaoVoltarAoTopo {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background-color: rgba(93, 64, 160, 0.349);
+    padding: 15px;
+    border-radius: 50%;
+    text-align: center;
+    z-index: 999;
+    transition: background-color 0.3s ease-in-out;
+}
+
+a#botaoVoltarAoTopo img{
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    bottom:20px;
+    right: 20px;
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out;
+}
+
+a#botaoVoltarAoTopo:hover{
+    background-color: rgba(183, 164, 228, 0.384);
+}
+
 /* CABEÇALHO */
 
 header {
