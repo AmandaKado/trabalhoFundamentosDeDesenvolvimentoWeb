@@ -46,7 +46,7 @@ header {
     position: fixed;
     top: 0;
     z-index: 999;
-    width: 100vw;
+    width: 100%;
     height: 90px;
     text-align: center;
 }
@@ -99,7 +99,6 @@ nav {
     width: 90vw;
     transition: transform 0.3s ease-in-out;
 }
-
 nav.menuAberto #linksNavegacao li:hover {
     background-color: rgba(191, 180, 218, 0.151);
     width: 90vw;
@@ -111,7 +110,7 @@ nav.menuAberto {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: auto; 
     background: rgba(42, 31, 68, 0.8) url('../media/backgroundBody.jpg') center / cover;
     backdrop-filter: blur(10px);     
@@ -140,6 +139,7 @@ nav.menuAberto #linksNavegacao li.ativo {
 }
 
 /* MAIN */
+
 .divisoria{
     width: 100%;
     height: 30px;
@@ -173,7 +173,7 @@ main #sobre {
 main #sobre h1 {
     font-family: var(--tituloPrincipal);
     font-size: 4em;
-    color: var(--roxo8);
+    color: var(--roxo7);
     text-align: center;
     margin: 30px 0;
 }
@@ -185,11 +185,6 @@ main #sobre p {
     font-style: italic;
     color: var(--roxo8);
     text-align: center;
-}
-
-main #sobre #dev {
-    color: var(--roxo1);
-    font-weight: bold;
 }
 
 .subtitulo::after {
@@ -209,9 +204,9 @@ main .fotoPerfil {
 
 @keyframes piscar {
     0%, 100% {
-        opacity: 1; /* O cursor está totalmente visível */
+        opacity: 1; 
     }
     50% {
-        opacity: 0; /* O cursor fica invisível no meio da animação */
+        opacity: 0; 
     }
 };
