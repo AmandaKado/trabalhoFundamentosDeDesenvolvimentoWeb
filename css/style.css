@@ -170,6 +170,8 @@ main .divisoria{
     );
 }
 
+/* (MAIN) SOBRE */
+
 main #sobre {
     position: relative;
     z-index: -2;
@@ -242,6 +244,10 @@ main #sobre p {
     margin: 0 30px 30px 30px;
     text-align: left;
 }
+
+
+
+/* KEYFRAMES */
 
 @keyframes piscar {
     0%, 100% {
