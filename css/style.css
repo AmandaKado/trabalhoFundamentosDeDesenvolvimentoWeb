@@ -268,7 +268,7 @@ main #sobre p {
 .fotoPerfil {
     margin: 30px;
     width: 100%;
-    max-width: 370px;
+    max-width: 300px;
     height: auto;
     border-radius: 10px 100px;
     box-shadow: 0 0 0 5px rgb(37, 14, 43);
@@ -277,19 +277,24 @@ main #sobre p {
 .tituloSobreMim {
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: flex-start;
     color: var(--roxo7);
     padding: 0px 30px 30px 30px;
-}
-
-.containerSobreMim {
-    text-align: left;
+    width: 100%;
 }
 
 .tituloSobreMim img {
     width: 30px;
     height: auto;
     margin-right: 15px;
+}
+
+.containerSobreMim {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
 }
 
 #sobre p.textoSobre {
@@ -372,7 +377,7 @@ main #sobre p {
 
 .cartaoProjeto {
     width: 100%;
-    max-width: 500px;
+    max-width: 700px;
     background-color: var(--roxo5);
     border-radius: 10px 60px;
     padding: 30px;
