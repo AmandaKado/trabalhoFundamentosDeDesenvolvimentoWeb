@@ -434,7 +434,8 @@ main #sobre p {
     padding: 30px;
 }
 
-.formularioContato h3 {
+#tituloContatos {
+    text-align: center;
     color: var(--roxo8);
     margin-bottom: 1.6em;
 }
@@ -451,6 +452,7 @@ main #sobre p {
     font-family: var(--textoComum);
     font-size: 1.2em;
     color: var(--roxo6);
+    margin-bottom: 5px;
 }
 
 .grupoFormulario input,
@@ -466,6 +468,13 @@ main #sobre p {
     margin-bottom: 15px;
 }
 
+
+.grupoFormulario input:focus,
+.grupoFormulario textarea:focus {
+    outline: none;
+    box-shadow: 0 0 8px var(--roxo6);
+}
+
 .botao {
     width: 100%;
     padding: 15px 30px;
@@ -477,6 +486,12 @@ main #sobre p {
     border-radius: 5px;
     text-decoration: none;
     cursor: pointer;
+}
+
+.botao:hover {
+    background-color: var(--roxo1);
+    color: var(--roxo8);
+    transition: background-color 0.4s ease-in-out, color 0.3s ease-in-out;
 }
 
 /* KEYFRAMES */
