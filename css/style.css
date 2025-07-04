@@ -377,7 +377,6 @@ main #sobre p {
     border-radius: 10px 60px;
     padding: 30px;
     margin: 30px auto;
-    
 }
 
 .cartaoProjeto:hover {
@@ -498,14 +497,17 @@ main #sobre p {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.3s ease-in-out;
 }
 
 .iconeRedesSociais {
     width: 60px;
     height: auto;
     margin: 30px 20px;
-    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+}
+
+.iconeRedesSociais:hover {
+    transform: scale(1.1);
     cursor: pointer;
 }
 
