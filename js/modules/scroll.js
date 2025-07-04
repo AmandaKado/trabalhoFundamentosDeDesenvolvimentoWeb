@@ -9,15 +9,14 @@ export function iniciarAnimacaoScroll() {
                     entrada.target.classList.add('visivel');
                 }
             });
-        }, { threshold: 0.2 });
+        }, { threshold: 0.1 });
 
         elementos.forEach(el => observer.observe(el));
     }
 
-    // Garanta que ela é chamada no final
     document.addEventListener('DOMContentLoaded', () => {
-        // ...
+
         iniciarAnimacaoScroll();
-        // ...
+
     });
 };

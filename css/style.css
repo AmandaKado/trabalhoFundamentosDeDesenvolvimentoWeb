@@ -267,7 +267,7 @@ main #sobre p {
 
 .fotoPerfil {
     margin: 30px;
-    width: 90vw;
+    width: 100%;
     max-width: 370px;
     height: auto;
     border-radius: 10px 100px;
@@ -371,19 +371,24 @@ main #sobre p {
 }
 
 .cartaoProjeto {
-    width: 90vw;
+    width: 100%;
     max-width: 500px;
-    background-color: var(--roxo6);
+    background-color: var(--roxo5);
     border-radius: 10px 60px;
     padding: 30px;
     margin: 30px auto;
     transition: transform 0.3s ease-in-out;
 }
 
+.cartaoProjeto:hover {
+    transform: scale(1.02);
+    background-color: var(--roxo6);
+    cursor: pointer;
+}
+
 .cartaoProjeto a {
     text-decoration: none;
     color: var(--roxo8);
-    transform: scale(1.02);
     cursor: pointer;
 }
 
@@ -398,6 +403,80 @@ main #sobre p {
     height: auto;
     margin: 15px 0;
     border-radius: 10px;    
+}
+
+/* (MAIN) CONTATO */
+
+#contato {
+    width: 100%;
+    padding: 30px;
+    background-color: var(--roxo1);
+}
+
+#contato p {
+    padding: 30px;
+}
+
+#iconeContato {
+    width: 30px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.formularioContato {
+    background: 
+    linear-gradient(
+        to bottom, 
+        var(--roxo2),
+        var(--roxo3)
+    );
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.formularioContato h3 {
+    color: var(--roxo8);
+    margin-bottom: 1.6em;
+}
+
+#iconeEmail {
+    width: 30px;
+    height: auto;
+    margin-right: 15px;
+}
+
+
+.grupoFormulario label {
+    text-align: left;
+    font-family: var(--textoComum);
+    font-size: 1.2em;
+    color: var(--roxo6);
+}
+
+.grupoFormulario input,
+.grupoFormulario textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+    color: var(--roxo8);
+    background-color: var(--roxo1);
+    margin-bottom: 15px;
+}
+
+.botao {
+    width: 100%;
+    padding: 15px 30px;
+    margin: 30px 0;
+    border: none;
+    background-color: var(--roxo7);
+    color: var(--roxo1);
+    font-size: 1.6em;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* KEYFRAMES */
