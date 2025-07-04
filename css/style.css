@@ -547,6 +547,16 @@ footer .rodapeSite .estrelaEnfeite {
 
 @media (min-width: 768px) and (max-width: 1199px) {
 
+    body #botaoVoltarAoTopo{
+        width: 60px;
+        height: 60px;
+    }
+
+    body #botaoVoltarAoTopo img {
+        width: 30px;
+        height: 30px;
+    }
+
     h1 {
         font-size: 4em;
     }
@@ -555,8 +565,16 @@ footer .rodapeSite .estrelaEnfeite {
         font-size: 2.1em;
     }
 
+    h3 {
+        font-size: 1.8em;
+    }
+
     h4, p {
         font-size: 1.5em;
+    }
+
+    body .divisoria {
+        height: 60px;
     }
 
     /* CABEÇALHO */
@@ -571,9 +589,13 @@ footer .rodapeSite .estrelaEnfeite {
 
     /* (MAIN) SOBRE */
 
+    #sobre .estrelaEnfeite {
+        margin: 60px;
+    }
+
     main #sobre .divisoriaSobre {
         height: 60px;
-        top: 550px;
+        top: 750px;
     }
 
     .fotoPerfil {
@@ -607,31 +629,25 @@ footer .rodapeSite .estrelaEnfeite {
     }
 
     .cartaoProjeto {
-        padding: 30px 60px;
+        padding: 60px;
+        margin: 60px 0;
+        max-width: 1199px;
     }
 
     /* (MAIN) CONTATO */
 
-    #iconeContato {
-        width: 60px;
-        height: auto;
+    #contato {
+        padding: 60px;
     }
 
-    .formularioContato {
-        padding: 30px 60px;
+    #iconeContato {
+        width: 60px;
     }
 
     .iconeRedesSociais {
         width: 60px;
-        margin: 60px 30px;
-    }
-
-    /* FOOTER */
-
-    footer .rodapeSite .estrelaEnfeite {
-        width: 60px;
-        height: auto;
-        margin: 0 30px;
+        margin: 60px 30px 0 30px;
     }
 
 }
+
