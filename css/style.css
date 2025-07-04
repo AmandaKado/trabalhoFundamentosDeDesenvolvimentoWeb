@@ -203,6 +203,7 @@ main .divisoria{
 main #sobre {
     position: relative;
     z-index: -2;
+    padding: 0 0 60px 0;
     background: linear-gradient(
         to bottom, 
         var(--roxo2),
@@ -247,6 +248,7 @@ main #sobre p {
     max-width: 370px;
     height: auto;
     border-radius: 10px 100px;
+    box-shadow: 0 0 0 5px rgb(37, 14, 43);
 }
 
 .tituloSobreMim {
