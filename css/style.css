@@ -32,6 +32,22 @@ h1 {
     font-family: var(--tituloPrincipal);
 }
 
+h2, h3  {
+    font-family: var(--textoComum);
+    font-size: 1.5em;
+    color: var(--roxo8);
+    font-weight: bold;
+    text-align: left;
+}
+
+h4 {
+    font-family: var(--textoComum);
+    font-size: 1.2em;
+    color: var(--roxo8);
+    font-weight: bold;
+    text-align: left;
+}
+
 p {
     font-family: var(--textoComum);
     font-size: 1.2em;
@@ -181,11 +197,9 @@ nav.menuAberto #linksNavegacao li.ativo {
 /* MAIN */
 
 .estrelaEnfeite {
-    display: flex;
-    flex-direction: row;
     width: 30px;
     height: auto;
-    margin: 30px 30px 0 30px;
+    padding: 30px;
 }
 
 main {
@@ -285,6 +299,30 @@ main #sobre p {
     font-weight: normal;
     margin: 0 30px 30px 30px;
     text-align: left;
+}
+
+/* (MAIN) EDUCACAO */
+
+#educacao {
+    padding:  0 30px 60px 30px;
+    background: linear-gradient(
+        to left, 
+        var(--roxo3),
+        var(--roxo2)
+    );
+}
+
+.conteiner {
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.conteiner #educacaoIcone  {
+    width: 30px;
+    height: auto;
+    margin-right: 15px;
 }
 
 /* KEYFRAMES */
