@@ -62,7 +62,6 @@ a#botaoVoltarAoTopo {
     background-color: rgba(93, 64, 160, 0.349);
     padding: 15px;
     border-radius: 50%;
-    text-align: center;
     z-index: 999;
     transition: background-color 0.3s ease-in-out;
 }
@@ -196,12 +195,6 @@ nav.menuAberto #linksNavegacao li.ativo {
 
 /* MAIN */
 
-.estrelaEnfeite {
-    width: 30px;
-    height: auto;
-    padding: 30px;
-}
-
 main {
     display: flex;
     flex-direction: column;
@@ -225,6 +218,10 @@ main .divisoria{
 }
 
 /* (MAIN) SOBRE */
+
+#sobre .estrelaEnfeite {
+    margin: 30px 30px 0 30px;
+}
 
 main #sobre {
     position: relative;
@@ -304,6 +301,7 @@ main #sobre p {
 /* (MAIN) EDUCACAO */
 
 #educacao {
+    width: 100%;
     padding:  30px 30px 60px 30px;
     background: linear-gradient(
         to left, 
@@ -313,16 +311,16 @@ main #sobre p {
 }
 
 #educacao .estrelaEnfeite {
-    margin: 0 30px;
+    margin: 0;
 }
 
-.conteiner {
+.container {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.conteiner #educacaoIcone  {
+.container #educacaoIcone  {
     width: 30px;
     height: auto;
     margin-right: 15px;
@@ -333,11 +331,11 @@ main #sobre p {
     color: var(--roxo6);
     text-align: left;
     text-decoration: dotted underline var(--roxo6);
-    padding-bottom: 30px;
+    padding: 30px 0;
 }
 
 .idiomas h3 {
-    padding: 30px 0 30px 0;
+    margin: 60px 0 0 0;
 }
 
 .itemCurso div, .idiomas div {
@@ -352,7 +350,8 @@ main #sobre p {
 #portfolio {
     display: flex;
     flex-direction: column;
-    padding: 30px 30px 60px 30px;
+    width: 100%;
+    padding: 30px;
     background: linear-gradient(
         to bottom, 
         var(--roxo1),
@@ -361,12 +360,42 @@ main #sobre p {
 }
 
 #portfolio h2 {
-    padding: 30px;
-    text-align: center;
+    padding: 30px 0;
+    text-align: left;
 }
 
-#portfolio .estrelaEnfeite {
-    margin: 30px;
+#iconeProjeto {
+    width: 30px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.cartaoProjeto {
+    width: 90vw;
+    max-width: 500px;
+    background-color: var(--roxo6);
+    border-radius: 10px 60px;
+    padding: 30px;
+    margin: 30px auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cartaoProjeto a {
+    text-decoration: none;
+    color: var(--roxo8);
+}
+
+.cartaoProjeto h3 {
+    text-align: center;
+    color: var(--roxo1);
+}
+
+
+.cartaoProjeto img {
+    width: 100%;
+    height: auto;
+    margin: 15px 0;
+    border-radius: 10px;    
 }
 
 /* KEYFRAMES */
