@@ -65,6 +65,18 @@ a#botaoVoltarAoTopo:hover{
     background-color: rgba(183, 164, 228, 0.384);
 }
 
+.fadeInElemento {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Estado final: visível na posição original (ativado pelo JavaScript) */
+.fadeInElemento.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* CABEÇALHO */
 
 header {
@@ -274,8 +286,6 @@ main #sobre p {
     margin: 0 30px 30px 30px;
     text-align: left;
 }
-
-
 
 /* KEYFRAMES */
 
