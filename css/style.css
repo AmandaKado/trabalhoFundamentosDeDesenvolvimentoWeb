@@ -54,6 +54,9 @@ p {
 }
 
 a#botaoVoltarAoTopo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 30px;
     height: 30px;
     position: fixed;
@@ -69,10 +72,8 @@ a#botaoVoltarAoTopo {
 a#botaoVoltarAoTopo img{
     width: 20px;
     height: 20px;
-    position: fixed;
     bottom:25px;
     right: 25px;
-    z-index: 1000;
     transition: background-color 0.3s ease-in-out;
 }
 
@@ -155,7 +156,7 @@ nav {
     transition: transform 0.3s ease-in-out;
 }
 nav.menuAberto #linksNavegacao li:hover {
-    background-color: rgba(191, 180, 218, 0.151);
+    background-color: rgba(219, 193, 246, 0.50);
     width: 90vw;
     transform: scale(1.02);
     cursor: pointer;
@@ -183,10 +184,6 @@ nav.menuAberto #menuHamburguer {
 nav.menuAberto #linksNavegacao,
 nav.menuAberto #fecharMenu {
     display: block;
-}
-
-nav.menuAberto #linksNavegacao li:hover {
-    background-color: rgba(219, 193, 246, 0.50);
 }
 
 nav.menuAberto #linksNavegacao li.ativo {
